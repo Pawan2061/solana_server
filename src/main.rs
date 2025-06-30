@@ -3,10 +3,14 @@ use axum::{
 };
 
 mod config;
+mod error;
 mod handlers;
 mod models;
 mod services;
+
 use config::Config;
+use error::AppError;
+use models::*;
 use services::SolanaService;
 use std::sync::Arc;
 use tower_http::cors::CorsLayer;
